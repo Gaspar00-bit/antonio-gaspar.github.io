@@ -1,262 +1,197 @@
-<!doctype html>
-<html lang="pt">
+<!DOCTYPE html>
+<html lang="pt-AO">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>António Gaspar • Técnico de Informática</title>
-  <meta name="description" content="Portfólio de António Gaspar — Técnico de Informática. Suporte, Desenvolvimento Web, Design Gráfico e Redes." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OnSolutions | Desenvolvimento de Sites, Sistemas e Aplicações em Luanda</title>
+  <meta name="description" content="A camangaWeb desenvolve sites, sistemas de gestão, aplicações móveis e automação de vendas para empresas e escolas em Angola.">
+  <meta property="og:title" content="camangaWeb | Sites, Sistemas e Aplicações">
+  <meta property="og:description" content="Sites, hospedagem, sistemas de gestão, apps e automação de vendas para o seu negócio.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0b1f3a">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#0b1020;
-      --card:rgba(255,255,255,0.03);
-      --glass:rgba(255,255,255,0.04);
-      --accent:#6ee7ff;
-      --accent-2:#9bffbe;
-      --text:#e6eef6;
-      --muted:#9aa4b2;
-      --border:rgba(255,255,255,0.04);
-      --shadow: 0 6px 18px rgba(2,6,23,0.6);
-    }
-
-    *{box-sizing:border-box;margin:0;padding:0}
-    html,body{height:100%}
-    body{
-      font-family:Inter,system-ui,Segoe UI,Arial,sans-serif;
-      background:radial-gradient(1200px 400px at 10% 10%, rgba(109,144,255,0.06), transparent),
-                 linear-gradient(180deg,var(--bg),#071025 120%);
-      color:var(--text);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.5;
-      padding:36px 20px;
-    }
-
-    .container{max-width:1100px;margin:0 auto}
-
-    header{
-      display:flex;align-items:center;gap:20px;padding:18px;
-      background:linear-gradient(90deg, rgba(110,231,255,0.06), rgba(155,255,190,0.03));
-      border:1px solid var(--border);
-      border-radius:14px;
-      backdrop-filter:blur(6px) saturate(120%);
-      box-shadow:var(--shadow);
-      margin-bottom:26px;
-    }
-
-    .avatar{
-      width:96px;height:96px;border-radius:18px;
-      background:linear-gradient(135deg,var(--accent),var(--accent-2));
-      display:flex;align-items:center;justify-content:center;
-      font-size:30px;font-weight:800;color:#021122;
-      box-shadow:0 6px 20px rgba(0,0,0,0.5);
-      flex-shrink:0;
-    }
-
-    header .meta{display:flex;flex-direction:column}
-    h1{font-size:24px;font-weight:700}
-    p.lead{color:var(--muted);font-size:14px;margin-top:6px}
-    .contact-line{margin-top:8px;color:var(--muted);font-size:13px}
-    .contact-line strong{color:var(--text);font-weight:600}
-
-    .grid{display:grid;grid-template-columns:1fr 320px;gap:22px;margin-top:20px}
-    .card{
-      background:linear-gradient(180deg,var(--card),transparent);
-      border-radius:12px;padding:18px;border:1px solid var(--border);
-      box-shadow:0 4px 16px rgba(2,6,23,0.5);
-    }
-
-    h2{color:var(--accent);margin-bottom:12px;font-weight:700}
-    h3{color:var(--accent-2);margin-bottom:8px;font-weight:700}
-
-    .intro p{color:var(--muted);margin-bottom:10px}
-
-    .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
-    .service{
-      background:var(--glass);padding:12px;border-radius:10px;border:1px solid var(--border);
-      transition:transform .18s ease,box-shadow .18s ease;
-    }
-    .service:hover{transform:translateY(-6px);box-shadow:0 8px 26px rgba(0,0,0,0.6)}
-
-    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
-    .project{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:12px;border-radius:12px;border:1px solid var(--border);cursor:pointer;transition:transform .16s ease,box-shadow .16s ease}
-    .project:hover{transform:translateY(-6px);box-shadow:0 16px 32px rgba(0,0,0,0.55)}
-    .project img{width:100%;height:140px;object-fit:cover;border-radius:8px;margin-bottom:10px}
-
-    .contact-list li{padding:10px 0;border-bottom:1px dashed rgba(255,255,255,0.03);color:var(--muted)}
-
-    .experience-list{display:flex;flex-direction:column;gap:10px}
-    .exp{background:linear-gradient(90deg, rgba(255,255,255,0.01), transparent);padding:10px;border-radius:10px;border:1px solid var(--border)}
-    .exp .role{font-weight:700;color:var(--text)}
-    .exp .company{color:var(--muted);font-size:13px}
-
-    footer{text-align:center;margin-top:28px;color:var(--muted);font-size:13px}
-
-    .whatsapp{position:fixed;right:18px;bottom:18px;background:var(--accent-2);color:#021122;padding:12px 16px;border-radius:999px;font-weight:700;text-decoration:none;box-shadow:0 10px 30px rgba(155,255,190,0.12);transition:transform .12s ease}
-    .whatsapp:hover{transform:translateY(-6px)}
-
-    /* Modal */
-    .modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(2,6,23,0.6);z-index:60}
-    .modal.open{display:flex}
-    .modal .panel{background:linear-gradient(180deg, #071124, #06101b);padding:18px;border-radius:12px;max-width:680px;width:92%;border:1px solid var(--border)}
-
-    @media(max-width:900px){.grid{grid-template-columns:1fr}.avatar{width:84px;height:84px}}
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="avatar">AG</div>
-      <div class="meta">
-        <h1>António Gaspar</h1>
-        <p class="lead">Técnico de Informática • Desenvolvimento Web • Suporte & Redes • Design Gráfico</p>
-        <div class="contact-line">Luanda, Cazenga • <strong>WhatsApp:</strong> 935 061 884 • <strong>Email:</strong> gasparantonio175@gmail.com</div>
-      </div>
-    </header>
 
-    <div class="grid">
-      <main>
-        <section class="card intro">
-          <h2>Sobre mim</h2>
-          <p>Sou Técnico de Informática com experiência em suporte técnico (Colégio Bondo Adelino), monitoramento de frotas (Velotrans/Naval), desenvolvimento de projetos web e desktop e trabalho remoto com clientes internacionais. Gosto de resolver problemas práticos e criar interfaces simples e funcionais.</p>
-          <p><strong>Habilidades:</strong> HTML, CSS, JavaScript, PHP, C#, Banco de Dados, Redes, Design Gráfico, Edição de Imagem.</p>
-        </section>
+  <header class="site-header" id="topo">
+    <div class="container header-inner">
+      <a class="logo" href="#topo" aria-label="camangaWeb, início">On<span>Solutions</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+      <nav id="menu" class="menu" aria-label="Principal">
+        <a href="#servicos">Serviços</a>
+        <a href="#processo">Como trabalhamos</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contacto">Contacto</a>
+        <a class="menu-cta" href="tel:+244935061884">935061884</a>
+      </nav>
+    </div>
+  </header>
 
-        <section class="card" style="margin-top:14px">
-          <h2>Experiência</h2>
-          <div class="experience-list">
-            <div class="exp">
-              <div class="role">Trabalho remoto — Webtagger</div>
-              <div class="company">2024 — Presente • Desenvolvimento web, manutenção e suporte remoto</div>
-              <div style="margin-top:8px;color:var(--muted);font-size:13px">Atuação remota em Webtagger: criação e manutenção de sites, integração com bases de dados e suporte ao cliente.</div>
-            </div>
-
-            <div class="exp">
-              <div class="role">Técnico de Suporte — Colégio Bondo Adelino</div>
-              <div class="company">2022 — 2023 • Suporte técnico e manutenção de equipamentos</div>
-            </div>
-
-            <div class="exp">
-              <div class="role">Monitoramento de Frotas — Velotrans / Naval</div>
-              <div class="company">2020 — 2022 • Operação e manutenção de sistemas de rastreio</div>
-            </div>
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow">Desenvolvimento de software em Luanda</p>
+          <h1>Sites, sistemas e aplicações para o seu negócio funcionar melhor.</h1>
+          <p class="hero-lead">
+            Desenvolvemos sites, sistemas de gestão, aplicações móveis e automação de vendas
+            para empresas e escolas. Acompanhamos o projeto desde o levantamento até ao suporte após a entrega.
+          </p>
+          <div class="actions">
+            <a class="btn btn-primary" href="https://wa.me/244930541783?text=Ol%C3%A1%2C%20gostaria%20de%20pedir%20um%20or%C3%A7amento." target="_blank" rel="noopener">Pedir orçamento</a>
+            <a class="btn btn-ghost" href="#servicos">Ver serviços</a>
           </div>
-        </section>
+        </div>
 
-        <section class="card" style="margin-top:14px">
-          <h2>Serviços</h2>
-          <div class="services">
-            <div class="service"><strong>Suporte Técnico</strong><p style="margin:6px 0;color:var(--muted)">Instalação, manutenção, recuperação de dados e configuração de redes.</p></div>
-            <div class="service"><strong>Desenvolvimento Web</strong><p style="margin:6px 0;color:var(--muted)">Sites estáticos, sistemas PHP, integração com bases de dados e painéis administrativos.</p></div>
-            <div class="service"><strong>Design Gráfico</strong><p style="margin:6px 0;color:var(--muted)">Criação de logotipos 3D e materiais para redes sociais.</p></div>
-            <div class="service"><strong>Projetos Académicos</strong><p style="margin:6px 0;color:var(--muted)">Trabalhos e relatórios para universidades e escolas — exemplo: Biblioteca Virtual.</p></div>
-          </div>
-        </section>
-
-        <section class="card" style="margin-top:14px">
-          <h2>Projetos</h2>
-          <div class="projects">
-            <article class="project" data-title="Sistema de Biblioteca Virtuais" data-desc="Sistema educativo para gestão de biblioteca virtual com painel administrativo.">
-              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Sistema de Biblioteca"/>
-              <h3>Sistema de Biblioteca Virtuais</h3>
-              <p style="color:var(--muted);margin:6px 0;font-size:13px">Gestão de conteúdos, utilizadores e empréstimos com painel administrativo.</p>
-            </article>
-
-            <article class="project" data-title="Sistema de Vendas" data-desc="Sistema de vendas com carrinho, gestão de produtos e painel administrativo.">
-              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Sistema de Vendas"/>
-              <h3>Sistema de Vendas</h3>
-              <p style="color:var(--muted);margin:6px 0;font-size:13px">Carrinho, gestão de stock e relatórios.</p>
-            </article>
-
-            <article class="project" data-title="Sistema de Tickets" data-desc="Projeto MVC para gestão de promoções e resgates com painel de cliente e admin.">
-              <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Sistema de Tickets"/>
-              <h3>Sistema de Tickets de Promoções</h3>
-              <p style="color:var(--muted);margin:6px 0;font-size:13px">Gestão de promoções e resgates.</p>
-            </article>
-
-            <article class="project" data-title="Logotipos 3D" data-desc="Criação de logotipos 3D comerciais — entrega rápida e personalização para empresas.">
-              <img src="https://images.unsplash.com/photo-1503602642458-232111445657?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Logos 3D"/>
-              <h3>Logotipos 3D</h3>
-              <p style="color:var(--muted);margin:6px 0;font-size:13px">Entrega rápida — 3.000 Kz (exemplo).</p>
-            </article>
-          </div>
-        </section>
-
-      </main>
-
-      <aside>
-        <div class="card">
-          <h3>Contacto</h3>
-          <ul class="contact-list">
-            <li><strong>Telefone / WhatsApp:</strong> +244 935 061 884</li>
-            <li><strong>Email:</strong> gasparantonio175@gmail.com</li>
-            <li><strong>Localização:</strong> Luanda, Cazenga, Angola</li>
-            <li><strong>Preço exemplo (Logo 3D):</strong> 3.000 Kz (entrega rápida)</li>
+        <aside class="offer" aria-label="Pacote de criação de site">
+          <p class="offer-label">Pacote de site</p>
+          <h2>Site profissional com hospedagem e domínio</h2>
+          <p class="offer-price">180.000 Kz <span>primeiro ano</span></p>
+          <ul class="list">
+            <li>Site responsivo, adaptado a telemóvel e computador</li>
+            <li>Hospedagem incluída durante 1 ano</li>
+            <li>Domínio próprio durante 1 ano</li>
+            <li>Suporte técnico</li>
           </ul>
-          <div style="margin-top:12px">
-            <a href="mailto:gasparantonio175@gmail.com" style="display:inline-block;padding:10px 14px;border-radius:8px;background:var(--accent);color:#021122;text-decoration:none;font-weight:700">Enviar Email</a>
-          </div>
-        </div>
-
-        <div class="card" style="margin-top:14px">
-          <h3>Redes & Notas</h3>
-          <p style="color:var(--muted);margin:6px 0">Atendo pelo WhatsApp — uso ativo para orçamentos rápidos. Também trabalho com gravação de aulas usando apenas o telemóvel.</p>
-        </div>
-
-        <div class="card" style="margin-top:14px">
-          <h3>Resumo Rápido</h3>
-          <p style="color:var(--muted);margin:6px 0;font-size:13px">Disponível para trabalho remoto e projetos locais. Respondo rapidamente via WhatsApp.</p>
-        </div>
-      </aside>
-    </div>
-
-    <footer>
-      © <span id="year"></span> António Gaspar — Técnico de Informática. Feito com HTML, CSS e JavaScript.
-    </footer>
-  </div>
-
-  <a class="whatsapp" href="https://wa.me/244935061884" target="_blank" rel="noopener">WhatsApp</a>
-
-  <div id="modal" class="modal" aria-hidden="true">
-    <div class="panel" role="dialog" aria-modal="true">
-      <h3 id="modal-title"></h3>
-      <p id="modal-desc" style="color:var(--muted);margin-top:8px"></p>
-      <div style="text-align:right;margin-top:14px">
-        <button id="closeModal" style="background:var(--accent);border:0;padding:8px 12px;border-radius:8px;font-weight:700;cursor:pointer">Fechar</button>
+          <a class="btn btn-primary btn-block" href="https://wa.me/244930541783?text=Ol%C3%A1%2C%20quero%20solicitar%20o%20pacote%20de%20cria%C3%A7%C3%A3o%20de%20site%20por%20180.000%20Kz." target="_blank" rel="noopener">Solicitar este pacote</a>
+        </aside>
       </div>
+    </section>
+
+    <section class="section" id="servicos">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Serviços</p>
+          <h2>O que podemos fazer pela sua empresa</h2>
+        </div>
+
+        <div class="services">
+          <article class="service">
+            <h3>Criação de sites</h3>
+            <p>Site institucional ou comercial, com hospedagem e domínio incluídos no primeiro ano.</p>
+            <p class="service-price">180.000 Kz</p>
+            <a class="link" href="https://wa.me/244930541783?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20cria%C3%A7%C3%A3o%20de%20sites." target="_blank" rel="noopener">Pedir orçamento</a>
+          </article>
+
+          <article class="service">
+            <h3>Hospedagem de aplicações web</h3>
+            <p>Colocamos a sua aplicação online em servidor cloud, com configuração, monitorização e suporte.</p>
+            <a class="link" href="https://wa.me/244930541783?text=Ol%C3%A1%2C%20gostaria%20de%20contratar%20hospedagem%20cloud." target="_blank" rel="noopener">Falar connosco</a>
+          </article>
+
+          <article class="service">
+            <h3>Aplicações móveis e Play Store</h3>
+            <p>Desenvolvimento do aplicativo e publicação na Google Play Store, com atualizações e manutenção.</p>
+            <a class="link" href="https://wa.me/244930541783?text=Ol%C3%A1%2C%20quero%20publicar%20uma%20aplica%C3%A7%C3%A3o%20na%20Play%20Store." target="_blank" rel="noopener">Falar connosco</a>
+          </article>
+
+          <article class="service">
+            <h3>Sistemas de gestão à medida</h3>
+            <p>Sistemas desenvolvidos para a forma como o seu negócio trabalha:</p>
+            <ul class="list list-plain">
+              <li>Gestão escolar: matrículas, notas e relatórios</li>
+              <li>Loja virtual com controlo de stock</li>
+              <li>Sistemas empresariais: controlo, finanças e recursos humanos</li>
+            </ul>
+            <a class="link" href="https://wa.me/244930541783?text=Ol%C3%A1%2C%20preciso%20de%20um%20sistema%20de%20gest%C3%A3o." target="_blank" rel="noopener">Pedir orçamento</a>
+          </article>
+
+          <article class="service">
+            <h3>Automação de vendas</h3>
+            <p>Atendimento mais rápido e organizado nos canais onde os seus clientes já estão:</p>
+            <ul class="list list-plain">
+              <li>Integração com WhatsApp Business</li>
+              <li>Gestão de Facebook e Instagram</li>
+              <li>Respostas automáticas e bots de atendimento</li>
+            </ul>
+            <a class="link" href="https://wa.me/244930541783?text=Ol%C3%A1%2C%20quero%20automatizar%20as%20vendas%20do%20meu%20neg%C3%B3cio." target="_blank" rel="noopener">Pedir orçamento</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="processo">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Como trabalhamos</p>
+          <h2>Um processo simples, do primeiro contacto à entrega</h2>
+        </div>
+
+        <ol class="steps">
+          <li>
+            <span class="step-n">1</span>
+            <h3>Conversa inicial</h3>
+            <p>Percebemos o que o seu negócio precisa e quais os resultados esperados.</p>
+          </li>
+          <li>
+            <span class="step-n">2</span>
+            <h3>Proposta</h3>
+            <p>Enviamos o orçamento com o âmbito do trabalho e o prazo de entrega.</p>
+          </li>
+          <li>
+            <span class="step-n">3</span>
+            <h3>Desenvolvimento</h3>
+            <p>Construímos o projeto e mostramos o progresso para validação.</p>
+          </li>
+          <li>
+            <span class="step-n">4</span>
+            <h3>Entrega e suporte</h3>
+            <p>Colocamos o projeto online e continuamos disponíveis para ajustes e suporte.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="sobre">
+      <div class="container about">
+        <div class="about-text">
+          <p class="eyebrow">Sobre</p>
+          <h2>Quem está por trás da camangaWeb</h2>
+          <p>
+           A camangaWeb é uma empresa de soluções tecnológicas e engenharia de software focada em desenvolvimento Full Stack e infraestrutura de alta performance.
+          </p>
+          <p>
+           Contamos com uma equipa de técnicos e engenheiros altamente qualificados, com vasta experiência no mercado nacional e em projetos internacionais (incluindo colaborações remotas para empresas no Brasil e em regimes freelance globais).
+        </div>
+
+        <div class="stack">
+          <h3>Tecnologias</h3>
+          <dl>
+            <div><dt>Back-end</dt><dd>Node.js, Prisma, Laravel, C# / .NET</dd></div>
+            <div><dt>Front-end</dt><dd>Angular, HTML, CSS, JavaScript</dd></div>
+            <div><dt>Dados</dt><dd>PostgreSQL, MySQL</dd></div>
+            <div><dt>Infraestrutura</dt><dd>Linux, Nginx, Docker, CI/CD</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="contacto">
+      <div class="container contact">
+        <div>
+          <p class="eyebrow">Contacto</p>
+          <h2>Vamos falar sobre o seu projeto</h2>
+          <p>Conte-nos o que precisa e enviamos um orçamento sem compromisso.</p>
+        </div>
+        <div class="contact-card">
+          <p><span>Telefone</span> <a href="tel:+244930541783">930 541 783</a></p>
+          <p><span>Telefone</span> <a href="tel:+244935061884">935061884</a></p>
+          <a class="btn btn-primary btn-block" href="https://wa.me/244935061884?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20da%20camangaWeb%20e%20gostaria%20de%20pedir%20um%20or%C3%A7amento." target="_blank" rel="noopener">Enviar mensagem no WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-brand">On<span>Solutions</span></p>
+      <p>Luanda, Angola</p>
+      <p>&copy; 2024 OnSolutions. Todos os direitos reservados.</p>
     </div>
-  </div>
+  </footer>
 
-  <script>
-    // Atualiza ano no rodapé
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Modal simples para projects
-    const modal = document.getElementById('modal');
-    const modalTitle = document.getElementById('modal-title');
-    const modalDesc = document.getElementById('modal-desc');
-    const closeModal = document.getElementById('closeModal');
-
-    document.querySelectorAll('.project').forEach(function(p){
-      p.addEventListener('click', function(){
-        modalTitle.textContent = p.dataset.title || p.querySelector('h3').textContent;
-        modalDesc.textContent = p.dataset.desc || p.querySelector('p').textContent;
-        modal.classList.add('open');
-        modal.setAttribute('aria-hidden','false');
-      });
-    });
-
-    closeModal.addEventListener('click', function(){
-      modal.classList.remove('open');
-      modal.setAttribute('aria-hidden','true');
-    });
-
-    modal.addEventListener('click', function(e){
-      if(e.target === modal) { modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); }
-    });
-
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
